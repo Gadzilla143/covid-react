@@ -7,13 +7,10 @@ import { Cards, Chart, CountryPicker } from './components'
 function App() {
   const [data, setData] = useState({})
 
-
   useEffect(() => {
     
-    async function fetchApi() {
-      const fetchedDate = await fetchData()
-      setData(fetchedDate)
-      
+    async function fetchApi() { 
+      setData(await fetchData())
     }
     
     fetchApi()
@@ -21,9 +18,6 @@ function App() {
   }, [])
   
   
-  
- 
-
 
   return (
     <div className={styles.container}>
