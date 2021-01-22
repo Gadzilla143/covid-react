@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import { fetchData } from './api';
-import { Cards, Chart, CountryPicker } from './components'
+import { Cards, Chart, CountryPicker, Map } from './components'
 
 import styles from './App.module.scss';
 
@@ -23,7 +23,6 @@ function App() {
   const handleCountryChange = async (countries) => {
     setCountry(countries)
     setData(await fetchData(countries))
-  
   }
   
   return (
@@ -32,7 +31,7 @@ function App() {
       <Cards data={data}/>
       <CountryPicker handleCountryChange={handleCountryChange}/>
       <Chart data={data} country={country}/>
-
+      <Map />
     </div>
   )
 }

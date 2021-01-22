@@ -7,7 +7,7 @@ import styles from './CountryPicker.module.scss'
 
 
 
-export const CountryPicker = ({ handleCountryChange }) => {
+const CountryPicker = ({ handleCountryChange }) => {
     const [fetchedCountries, setFetchedCountries] = useState([])
 
     useEffect(() => {

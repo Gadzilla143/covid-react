@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import styles from './Cards.module.scss'
 import cx from 'classnames';
 
-export const Cards = ({data :{ confirmed, recovered, deaths, lastUpdate}}) => {
+const Cards = ({data :{ confirmed, recovered, deaths, lastUpdate}}) => {
     if(!confirmed) {
         return 'Loading...'
     }
